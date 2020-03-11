@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "nohaidragos",
+      "nativeLanguage": "ro"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "monolith",
+    "baseName": "nohaidragos",
+    "packageName": "nohaidragos",
+    "packageFolder": "nohaidragos",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MGQwY2RjZWI5YjAwNTE1M2U1ODRjNmZhMTliN2IzYjJiNDY4MjMxNGZlMzVjY2VlZjJjMWNkZjk4ODljMDRhY2Y1MjhhZWYxMjRhY2UwMzVlNTFlNTE0MWFlZDU0YzAwMjE3OTdlMmJjY2ZjNDgwNWM1MmE5YzM4YWZkZWI0NjI=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "minty",
+    "clientThemeVariant": "primary",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "ro",
+    "languages": ["ro"]
+  }
+}
