@@ -1,0 +1,41 @@
+entity Departament {
+	numeDepartament String required 
+}
+
+entity ProgramStudiu {
+	program String
+}
+
+entity CadruDidactic {
+	nume String required,
+    prenume String required,
+    titlu String required,
+    email String,
+    birou Integer
+}
+
+entity Student {
+	nume String required,
+    prenume String required,
+    numarMatricol Integer,
+    lucrareLicenta String,
+    linia LiniaDeStudiu,
+    forma FormaInvatamant
+}
+
+enum LiniaDeStudiu {
+		ROMANA, ENGLEZA, MAGHIARA, GERMANA
+}
+
+enum FormaInvatamant {
+		ID, IF
+}
+
+
+relationship OneToMany {
+    Departament{programStudiu} to ProgramStudiu,
+    CadruDidactic{student} to Student
+    Departament{CadruDidactic} to CadruDidactic,
+}
+
+paginate Student, Departament, CadruDidactic with pagination

@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cadruDidactic">
+            <h2><span jhiTranslate="nohaidragosApp.cadruDidactic.detail.title">Cadru Didactic</span> {{cadruDidactic.nume}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="nohaidragosApp.cadruDidactic.nume">Nume</span></dt>
+                <dd>
+                    <span>{{cadruDidactic.nume}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.cadruDidactic.prenume">Prenume</span></dt>
+                <dd>
+                    <span>{{cadruDidactic.prenume}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.cadruDidactic.titlu">Titlu</span></dt>
+                <dd>
+                    <span>{{cadruDidactic.titlu}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.cadruDidactic.email">Email</span></dt>
+                <dd>
+                    <span>{{cadruDidactic.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.cadruDidactic.birou">Birou</span></dt>
+                <dd>
+                    <span>{{cadruDidactic.birou}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.cadruDidactic.departament">Departament</span></dt>
+                <dd>
+                    <div *ngIf="cadruDidactic.departament">
+                        <a [routerLink]="['/departament', cadruDidactic.departament?.id, 'view']">{{cadruDidactic.departament?.numeDepartament}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cadru-didactic', cadruDidactic.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

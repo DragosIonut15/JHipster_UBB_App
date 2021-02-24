@@ -1,0 +1,79 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-student-heading" jhiTranslate="nohaidragosApp.student.home.createOrEditLabel">Create or edit a Student</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.student.nume" for="field_nume">Nume</label>
+                    <input type="text" class="form-control" name="nume" id="field_nume"
+                           formControlName="nume"/>
+                    <div *ngIf="editForm.get('nume').invalid && (editForm.get('nume').dirty || editForm.get('nume').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('nume').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.student.prenume" for="field_prenume">Prenume</label>
+                    <input type="text" class="form-control" name="prenume" id="field_prenume"
+                           formControlName="prenume"/>
+                    <div *ngIf="editForm.get('prenume').invalid && (editForm.get('prenume').dirty || editForm.get('prenume').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('prenume').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.student.numarMatricol" for="field_numarMatricol">Numar Matricol</label>
+                    <input type="number" class="form-control" name="numarMatricol" id="field_numarMatricol"
+                           formControlName="numarMatricol"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.student.lucrareLicenta" for="field_lucrareLicenta">Lucrare Licenta</label>
+                    <input type="text" class="form-control" name="lucrareLicenta" id="field_lucrareLicenta"
+                           formControlName="lucrareLicenta"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.student.linia" for="field_linia">Linia</label>
+                    <select class="form-control" name="linia" formControlName="linia" id="field_linia">
+                        <option value="ROMANA">{{'nohaidragosApp.LiniaDeStudiu.ROMANA' | translate}}</option>
+                        <option value="ENGLEZA">{{'nohaidragosApp.LiniaDeStudiu.ENGLEZA' | translate}}</option>
+                        <option value="MAGHIARA">{{'nohaidragosApp.LiniaDeStudiu.MAGHIARA' | translate}}</option>
+                        <option value="GERMANA">{{'nohaidragosApp.LiniaDeStudiu.GERMANA' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.student.forma" for="field_forma">Forma</label>
+                    <select class="form-control" name="forma" formControlName="forma" id="field_forma">
+                        <option value="ID">{{'nohaidragosApp.FormaInvatamant.ID' | translate}}</option>
+                        <option value="IF">{{'nohaidragosApp.FormaInvatamant.IF' | translate}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.student.cadruDidactic" for="field_cadruDidactic">Cadru Didactic</label>
+                    <select class="form-control" id="field_cadruDidactic" name="cadruDidactic" formControlName="cadruDidactic">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="cadruDidacticOption.id === editForm.get('cadruDidactic').value?.id ? editForm.get('cadruDidactic').value : cadruDidacticOption" *ngFor="let cadruDidacticOption of cadrudidactics; trackBy: trackCadruDidacticById">{{cadruDidacticOption.nume}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

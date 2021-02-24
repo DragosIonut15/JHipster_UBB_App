@@ -1,0 +1,24 @@
+{
+  "nohaidragosApp": {
+    "departament": {
+      "home": {
+        "title": "Departament",
+        "createLabel": "Creare departament",
+        "createOrEditLabel": "Creare sau editare departament",
+        "notFound": "Nu s-a găsit nici un departament."
+      },
+      "created": "A fost creat un nou departament cu identificatorul {{ param }}",
+      "updated": "Departamentul cu identificatorul {{ param }} a fost actualizat",
+      "deleted": "Departamentul cu identificatorul {{ param }} a fost șters",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți departamentul {{ id }}?"
+      },
+      "detail": {
+        "title": "Departament"
+      },
+      "numeDepartament": "Nume departament",
+      "programStudiu": "Program studiu",
+      "cadruDidactic": "Cadru didactic"
+    }
+  }
+}

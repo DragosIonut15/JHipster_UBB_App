@@ -1,0 +1,28 @@
+{
+  "nohaidragosApp": {
+    "student": {
+      "home": {
+        "title": "Student",
+        "createLabel": "Creare student",
+        "createOrEditLabel": "Creare sau editare student",
+        "notFound": "Nu s-a găsit nici un student."
+      },
+      "created": "A fost creat un nou student cu identificatorul {{ param }}",
+      "updated": "Studentul cu identificatorul {{ param }} a fost actualizat",
+      "deleted": "Studentul cu identificatorul {{ param }} a fost șters",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți studentul {{ id }}?"
+      },
+      "detail": {
+        "title": "Student"
+      },
+      "nume": "Nume",
+      "prenume": "Prenume",
+      "numarMatricol": "Numar matricol",
+      "lucrareLicenta": "Lucrare licență",
+      "linia": "Linia de predare",
+      "forma": "Forma de învățământ",
+      "cadruDidactic": "Profesor coordonator"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+    "name": "Student",
+    "fields": [
+        {
+            "fieldName": "nume",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "prenume",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "numarMatricol",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lucrareLicenta",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "linia",
+            "fieldType": "LiniaDeStudiu",
+            "fieldValues": "ROMANA,ENGLEZA,MAGHIARA,GERMANA"
+        },
+        {
+            "fieldName": "forma",
+            "fieldType": "FormaInvatamant",
+            "fieldValues": "ID,IF"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "cadruDidactic",
+            "otherEntityName": "cadruDidactic",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200311171129",
+    "entityTableName": "student",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

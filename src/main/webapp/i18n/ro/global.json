@@ -1,15 +1,19 @@
 {
   "global": {
-    "title": "Nohaidragos",
+    "title": "Nohai Dragoș-Ionuț",
     "browsehappy": "Folosiți un browser <strong>vechi</strong>. Va rugăm <a href=\"http://browsehappy.com/?locale=en\"> să îl actualizați</a> pentru o experiență îmbunătațită.",
     "menu": {
       "home": "Acasă",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entități",
+        "main": "Tabele",
         "bankAccount": "ContBancar",
         "label": "Etichetă",
         "operation": "Operație",
+        "departament": "Departament",
+        "programStudiu": "Program studiu",
+        "cadruDidactic": "Cadru didactic",
+        "student": "Student",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -93,7 +97,7 @@
       "id": "ID"
     },
     "ribbon": {
-      "dev": "Development"
+      "dev": "Licență 2020"
     },
     "item-count": "Se afișează {{first}} - {{second}} din {{total}} elemente."
   },
@@ -140,5 +144,5 @@
     "idexists": "O nouă entitate {{entityName}} nu poate avea un ID existent",
     "idnull": "Invalid ID"
   },
-  "footer": "Acesta este subsolul paginii dumneavoastră"
+  "footer": "Universitatea Babeș-Bolyai @ FSEGA - Nohai Dragoș-Ionuț"
 }

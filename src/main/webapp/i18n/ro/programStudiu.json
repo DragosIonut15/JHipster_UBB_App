@@ -1,0 +1,23 @@
+{
+  "nohaidragosApp": {
+    "programStudiu": {
+      "home": {
+        "title": "Program studiu",
+        "createLabel": "Creare program studiu",
+        "createOrEditLabel": "Creare sau editare program studiu",
+        "notFound": "Nu s-a găsit nici un program de studiu."
+      },
+      "created": "A fost creat un nou program de studiu cu identificatorul {{ param }}",
+      "updated": "Programul de studiu cu identificatorul {{ param }} a fost actualizat",
+      "deleted": "Programul de studiu cu identificatorul {{ param }} a fost șters",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți programul de studiu {{ id }}?"
+      },
+      "detail": {
+        "title": "Program studiu"
+      },
+      "program": "Program",
+      "departament": "Departament"
+    }
+  }
+}

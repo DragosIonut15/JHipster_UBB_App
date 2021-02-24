@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-cadru-didactic-heading" jhiTranslate="nohaidragosApp.cadruDidactic.home.createOrEditLabel">Create or edit a Cadru Didactic</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.cadruDidactic.nume" for="field_nume">Nume</label>
+                    <input type="text" class="form-control" name="nume" id="field_nume"
+                           formControlName="nume"/>
+                    <div *ngIf="editForm.get('nume').invalid && (editForm.get('nume').dirty || editForm.get('nume').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('nume').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.cadruDidactic.prenume" for="field_prenume">Prenume</label>
+                    <input type="text" class="form-control" name="prenume" id="field_prenume"
+                           formControlName="prenume"/>
+                    <div *ngIf="editForm.get('prenume').invalid && (editForm.get('prenume').dirty || editForm.get('prenume').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('prenume').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.cadruDidactic.titlu" for="field_titlu">Titlu</label>
+                    <input type="text" class="form-control" name="titlu" id="field_titlu"
+                           formControlName="titlu"/>
+                    <div *ngIf="editForm.get('titlu').invalid && (editForm.get('titlu').dirty || editForm.get('titlu').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('titlu').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.cadruDidactic.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.cadruDidactic.birou" for="field_birou">Birou</label>
+                    <input type="number" class="form-control" name="birou" id="field_birou"
+                           formControlName="birou"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="nohaidragosApp.cadruDidactic.departament" for="field_departament">Departament</label>
+                    <select class="form-control" id="field_departament" name="departament" formControlName="departament">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="departamentOption.id === editForm.get('departament').value?.id ? editForm.get('departament').value : departamentOption" *ngFor="let departamentOption of departaments; trackBy: trackDepartamentById">{{departamentOption.numeDepartament}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

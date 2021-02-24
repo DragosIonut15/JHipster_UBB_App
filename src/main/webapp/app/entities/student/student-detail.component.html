@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="student">
+            <h2><span jhiTranslate="nohaidragosApp.student.detail.title">Student</span> {{student.nume}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="nohaidragosApp.student.nume">Nume</span></dt>
+                <dd>
+                    <span>{{student.nume}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.student.prenume">Prenume</span></dt>
+                <dd>
+                    <span>{{student.prenume}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.student.numarMatricol">Numar Matricol</span></dt>
+                <dd>
+                    <span>{{student.numarMatricol}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.student.lucrareLicenta">Lucrare Licenta</span></dt>
+                <dd>
+                    <span>{{student.lucrareLicenta}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.student.linia">Linia</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'nohaidragosApp.LiniaDeStudiu.' + student.linia}}">{{student.linia}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.student.forma">Forma</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'nohaidragosApp.FormaInvatamant.' + student.forma}}">{{student.forma}}</span>
+                </dd>
+                <dt><span jhiTranslate="nohaidragosApp.student.cadruDidactic">Cadru Didactic</span></dt>
+                <dd>
+                    <div *ngIf="student.cadruDidactic">
+                        <a [routerLink]="['/cadru-didactic', student.cadruDidactic?.id, 'view']">{{student.cadruDidactic?.nume}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/student', student.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

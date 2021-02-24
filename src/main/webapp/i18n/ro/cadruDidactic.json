@@ -1,0 +1,28 @@
+{
+  "nohaidragosApp": {
+    "cadruDidactic": {
+      "home": {
+        "title": "Cadru didactic",
+        "createLabel": "Creare cadru didactic",
+        "createOrEditLabel": "Creare sau editare cadru didactic",
+        "notFound": "Nu s-a găsit nici un cadru didactic."
+      },
+      "created": "A fost creat un nou cadru cidactic cu identificatorul {{ param }}",
+      "updated": "Cadrul didactic cu identificatorul {{ param }} a fost actualizat",
+      "deleted": "Cadrul didactic cu identificatorul {{ param }} a fost șters",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți cadrul didactic {{ id }}?"
+      },
+      "detail": {
+        "title": "Cadru didactic"
+      },
+      "nume": "Nume",
+      "prenume": "Prenume",
+      "titlu": "Titlu",
+      "email": "E-mail",
+      "birou": "Birou",
+      "departament": "Departament",
+      "student": "Student"
+    }
+  }
+}

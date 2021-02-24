@@ -1,0 +1,35 @@
+{
+    "name": "Departament",
+    "fields": [
+        {
+            "fieldName": "numeDepartament",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "programStudiu",
+            "otherEntityRelationshipName": "departament",
+            "relationshipName": "programStudiu"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cadruDidactic",
+            "otherEntityRelationshipName": "departament",
+            "relationshipName": "cadruDidactic"
+        }
+    ],
+    "changelogDate": "20200311171126",
+    "entityTableName": "departament",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
